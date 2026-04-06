@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌙 Lunar Intentions | Energy-Based To-Do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <div id="star-field"></div>
+    <button id="theme-btn" onclick="toggleTheme()">✨ Toggle Realm</button>
 
+    <div class="container">
+        <div class="header">
+            <div id="lunar-orb">🌑</div>
+            <h1 id="title">Celestial Tasks</h1>
+            <p id="subtitle">Align your work with your energy</p>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Whisper a task...">
+            <select id="energyLevel">
+                <option value="🌑">🌑 Low Energy</option>
+                <option value="🌓" selected>🌓 Mid Energy</option>
+                <option value="🌕">🌕 High Energy</option>
+            </select>
+            <button onclick="addTask()">Add ✨</button>
+        </div>
+
+        <div class="task-wrappers">
+            <h3>Current Intentions</h3>
+            <ul id="taskList"></ul>
+            
+            <div id="shadowBox" class="shadow-zone" style="display:none;">
+                <h3>🌑 The Shadow Box</h3>
+                <p class="tiny">Tasks older than 3 days. Face them when ready.</p>
+                <ul id="shadowList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
